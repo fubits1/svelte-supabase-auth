@@ -1,0 +1,26 @@
+{
+  "name": "sveltekit-supabase-crud",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "svelte-kit dev",
+    "build": "svelte-kit build",
+    "package": "svelte-kit package",
+    "preview": "svelte-kit preview",
+    "prepare": "svelte-kit sync"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-auto": "next",
+    "@sveltejs/kit": "next",
+    "dotenv": "^16.0.0",
+    "svelte": "^3.47.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-svelte3": "^3.2.1",
+    "prettier": "^2.5.1",
+    "prettier-plugin-svelte": "^2.5.0"
+  },
+  "type": "module",
+  "dependencies": {
+    "@supabase/supabase-js": "^1.35.1"
+  }
+}
