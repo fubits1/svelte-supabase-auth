@@ -1,38 +1,16 @@
-# create-svelte
+# Svelte + Supabase CRUD & Auth Demo
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+[![Netlify Status](https://api.netlify.com/api/v1/badges/75d854f6-177c-420d-8139-c137287936c1/deploy-status)](https://app.netlify.com/sites/sveltekit-supabase-auth/deploys)
 
-## Creating a project
+Adapted from: https://supabase.com/docs/guides/with-svelte for https://kit.svelte.dev
 
-If you're seeing this, you've probably already done this step. Congrats!
+> since `svelte-kit` uses `vite` we need to prefix the environment variables with `VITE_` (locally in `.env` and globally in your deployment environment [i.e. Netlify])
 
-```bash
-# create a new project in the current directory
-npm init svelte
-
-# create a new project in my-app
-npm init svelte my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Setup the Supabase project as described in https://supabase.com/docs/guides/with-svelte (also see `utils/db/create-auth-table.sql`) and add the following to your local (`.gitignore`-ed) `.env` file:
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+export VITE_SVELTE_APP_SUPABASE_URL=<your-api-key>
+export VITE_SVELTE_APP_SUPABASE_ANON_KEY=<your-api-url>
 ```
 
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+> Note: The build directory has been set to `build` to comply with the Netlify default.
